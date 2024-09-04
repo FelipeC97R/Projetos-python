@@ -1,0 +1,1 @@
+print('\033[1;34;43mAprender Python é divertido!\033]m')
