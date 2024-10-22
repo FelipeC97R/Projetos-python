@@ -12,18 +12,19 @@ while True:
         print(' .', end='', flush=True)
         sleep(1)
         
-
+    print('\n','='*30)
     print(f'\nEm maiúscula: {name.upper()}\n'
         f'Em minúscula: {name.lower()}\n'
         f'Letras: {len(name)-name.count(' ')}\n'
         f'Espaços: {name.count(' ')}\n'
         f'Primeiro nome {name.split()[0]}\n'
         f'Letra no primeiro nome: {name.strip().find(' ')}')
+    print('='*30)
 
     while True:
-        chooseUserExit = input('Gostaria de testar outro nome?[s/n]:').upper
+        chooseUserExit = input('Gostaria de testar outro nome?[s/n]:').upper()
         if chooseUserExit in ('S','N'):
             break
         print('Valor incorreto, tente novamente')
-    if chooseUserExit == 'S':
+    if chooseUserExit == 'N':
         break
