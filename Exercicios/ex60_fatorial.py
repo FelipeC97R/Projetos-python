@@ -19,9 +19,9 @@ while True:
     print(f'= {factorial(number):,}'.replace(',','.'))
     sleep(1)
     while True:
-        otherNumberOption = input('\nGostaria de ver outro número [s/n]:').lower()
-        if otherNumberOption in ('s','n'):
+        tryOtherNumber = input('\nGostaria de ver outro número [s/n]:').lower()
+        if tryOtherNumber in ('s','n'):
             break
-        print('Valor inválido')
-    if otherNumberOption == 'n':
+        print('Valor inválido, tente novamente')
+    if tryOtherNumber == 'n':
         break

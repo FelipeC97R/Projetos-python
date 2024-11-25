@@ -16,7 +16,7 @@ while True:
     if trabalhador['nCarteiraTrabalho'] != 0:
         trabalhador['ano_contratacao'] = int(input('Ano contratação: '))
         trabalhador['salario'] = str(input('Salário: '))
-
+        trabalhador['aposentadoria'] = trabalhador['ano_contratacao']+35 - datetime.now().year
     banco_dados.append(trabalhador.copy())
 
     while True:
@@ -27,4 +27,7 @@ while True:
     if optionQuit == 's':
         break
 
-print(banco_dados)
+for trabalhador in banco_dados:
+    print('')
+    for categoria, dados in trabalhador.items():
+        print(f'{categoria}: {dados}')

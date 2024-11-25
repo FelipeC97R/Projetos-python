@@ -11,6 +11,8 @@ todos_jogadores = {'Pedro':randint(1,6),
                    'João':randint(1,6),
                    'Pamela':randint(1,6)}
 
+print(todos_jogadores.items())
+
 for nome, resultado in todos_jogadores.items():
     print(f'{nome} tirou {resultado}')
     sleep(0.5)
