@@ -10,13 +10,12 @@ sleep(1)
 totalAmountMoney = int(input('Quanto será o valor sacado: '))
 Bills = [50,20,10,1]
 
-for bill in (Bills):
+for bill in Bills:
     countBills = 0
-    while True:
-        if totalAmountMoney < bill:
-            break
+    while totalAmountMoney >= bill:
         totalAmountMoney -= bill
         countBills +=1
+    sleep(1)
     print(f'Notas de {bill}: {countBills}')
 
 print('Imprimindo notas ...')
