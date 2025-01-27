@@ -22,4 +22,4 @@ while True:
     if inserirValor == 'N':
         break
 
-print(f'Lista: {numeros.sort()}')
+print(f'Lista: {sorted(numeros)}')
