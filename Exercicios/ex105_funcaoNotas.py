@@ -1,37 +1,20 @@
-'''Faça um programa que tenha uma função notas() que pode receber várias notas de alunos e vai
+'''Faça um programa pode receber várias notas de alunos e vai
  retornar um dicionário com as seguintes informações:
 – Quantidade de notas
 – A maior nota
 – A menor nota
-– A média da turma                                                                                                                                                      
+– A média das notas                                                                                                                                                      
 – A situação (opcional)'''
 
+def notas(*argNotas,situacao=False):
+    maiorNota = max(argNotas)
+    menorNota = min(argNotas)
+    media = sum(argNotas)/len(argNotas)
 
-# classe = []
-# while True:
-#     aluno = {}
-#     aluno['nome'] =  str(input('Nome do aluno: '))
-#     nota = []
-    
-#     contador_notas = 1
-#     while True: 
-#         nota.append(int(input(f'Nota {contador_notas}: ')))
-#         contador_notas += 1
+    print(f'Maior nota: {maiorNota}')
+    print(f'Menor nota: {menorNota}')
+    print(f'Média : {media}')
+    if situacao ==True:
+        print('Aprovado' if media>=7 else 'Reprovado')
 
-#         finalizar_notas = str(input('Sair?[s/n]:')).upper().strip()
-#         if finalizar_notas == 'S':
-#             break
-#     aluno['notas'] = nota[:]
-#     classe.append(aluno.copy())
-#     finalizar_alunos = str(input('Sair Alunos? ')).upper().strip()
-#     if finalizar_alunos == 'S':
-#         break
-
-classe = [{'nome': 'Ana', 'notas': [5, 6]}, {'nome': 'Paulo', 'notas': [8, 3, 9]}]
-total_notas = sum(len([aluno['notas']]) for aluno in classe)
-
-for aluno in classe:
-    tot_notas = len(aluno['notas'])
-
-    
-print(total_notas)
+notas(1,2,3,4,situacao=True)
